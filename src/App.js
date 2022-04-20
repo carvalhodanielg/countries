@@ -31,14 +31,20 @@ function App() {
   return (
 
     <div className="App">
-      
+
+
+
       {flags !== undefined &&
 
-        
-        <Cards flags={flags[1]}/>
+        flags.map((item, key)=>(
 
+          <Cards key={key} flags={item} />
+          
+        ))
+
+
+ 
       }
-
 
 
 
@@ -47,3 +53,11 @@ function App() {
 }
 
 export default App;
+
+
+// {flags !== undefined &&
+
+        
+//   
+
+// }
