@@ -14,12 +14,15 @@ export const Cards = ({flags}) => {
             </div>
 
             <div className="nameArea">
-            {flags.name.common}
+                <h2>{flags.name.common}</h2>
+            
             </div>
 
             <div className="infosArea">
-                    Capital: {flags.capital} <br/> <br/>
-                    Languages: 
+                   <p> <strong> Capital: </strong>  {flags.capital}</p>
+                   <span>
+                   <strong> Languages: </strong>
+                    </span>  
                     {flags.languages !== undefined &&
 
                     Object.values(flags.languages).map((item, index)=>(
@@ -28,8 +31,13 @@ export const Cards = ({flags}) => {
                 
                     }
 
-                     <br/><br/>
-                    Population: {flags.population} <br/> <br/>
+                    <p>
+                    <strong> Population: </strong> 
+                    {flags.population}
+                    </p> 
+
+
+
                     Currency:
             </div>
 

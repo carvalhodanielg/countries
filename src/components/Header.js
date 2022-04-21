@@ -1,10 +1,10 @@
-
+import './header.css'
 
 export const Header = ({flags}) => {
 
     return(
 
-        <div>
+        <div className="header">
 
             <h2> World Countries Data</h2>
 

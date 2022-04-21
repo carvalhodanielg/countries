@@ -64,7 +64,7 @@ function App() {
 
       <div className='searchArea'>
 
-          <input type='text' value={textInput} onChange={handleChangeInput} />
+          <input type='text' value={textInput} onChange={handleChangeInput} placeholder='Search countries by name...'/>
 
       </div>
 
