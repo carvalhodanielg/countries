@@ -1,6 +1,21 @@
-.App{
+header{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchArea{
+  text-align: center;
+  width: 100vw;
+}
+
+.searchArea input{
+  width: 60%;
+  height: 40px;;
+}
+
+
+.mainContainer{
   display: flex;
-  
   flex-wrap: wrap;
   justify-content: space-between;
 }

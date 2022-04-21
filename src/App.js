@@ -8,6 +8,7 @@ function App() {
 
   const [flags, setFlags] = useState();
   const [loading, setLoading] = useState(true);
+  const [textInput, setTextInput] = useState('');
 
 
   const loadCountries = async () => {
@@ -19,32 +20,52 @@ function App() {
 
 
   useEffect(()=>{
+    //botar função asincrona pra carreagar API
     setLoading(false);
     loadCountries();
     setLoading(true);
     
   },[]);
 
+  const handleChangeInput = (e) => {
 
+    setTextInput(e.target.value)
+
+
+  }
 
 
   return (
 
     <div className="App">
 
+    <header>
 
+        <h2> World Countries Data</h2>
+        {/* <p>Currently, we have {flags.length} countries</p> */}
+        
+    </header>
 
-      {flags !== undefined &&
+      <div className='searchArea'>
 
-        flags.map((item, key)=>(
+          <input type='text' value={textInput} onChange={handleChangeInput} />
+
+      </div>
+
+      <div className='mainContainer'>
+
+          {flags !== undefined &&
+
+          flags.map((item, key)=>(
 
           <Cards key={key} flags={item} />
-          
-        ))
+  
+          ))
+          }
+
+      </div>
 
 
- 
-      }
 
 
 
