@@ -1,50 +1,66 @@
 import './App.css';
 import { Cards } from './components/Card';
-
 import { useEffect, useState } from 'react'
 import { API } from './components/API';
+import { Header } from './components/Header';
+
 
 function App() {
 
   const [flags, setFlags] = useState();
   const [loading, setLoading] = useState(true);
-  const [textInput, setTextInput] = useState('');
+  const [textInput, setTextInput] = useState("");
 
 
   const loadCountries = async () => {
+      let json = await API.getAllFlags(); 
+      setFlags(json);
+  }
 
-    let json = await API.getAllFlags(); 
-    setFlags(json);
+  const filteredCountries = async (busca) => {
+    if(busca != ''){
+      let json = await API.filteredFlags(busca);
+      setFlags(json)
+      console.log('filtered: '+busca)
+    }else{
+      loadCountries();
+    }
+
   }
 
 
-
   useEffect(()=>{
-    //botar função asincrona pra carreagar API
-    setLoading(false);
-    loadCountries();
-    setLoading(true);
-    
+      setLoading(false);
+      loadCountries();
+ 
+      setLoading(true);
+
+ 
   },[]);
 
   const handleChangeInput = (e) => {
 
-    setTextInput(e.target.value)
-
-
+          setTextInput(e.target.value)
+          filteredCountries(e.target.value)
+          console.log(e.target.value)
+        
   }
 
 
+
+
   return (
+
+      
 
     <div className="App">
 
     <header>
 
-        <h2> World Countries Data</h2>
-        {/* <p>Currently, we have {flags.length} countries</p> */}
+        <Header flags={flags}/>
         
     </header>
+
 
       <div className='searchArea'>
 
@@ -53,8 +69,9 @@ function App() {
       </div>
 
       <div className='mainContainer'>
-
           {flags !== undefined &&
+
+          
 
           flags.map((item, key)=>(
 

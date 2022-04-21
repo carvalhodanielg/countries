@@ -9,11 +9,6 @@ export const Cards = ({flags}) => {
         
         <div className="card"> 
 
-
-
-
-
-
              <div className="flagArea">
                    <img src={flags.flags.png} alt=""/> 
             </div>
@@ -27,8 +22,8 @@ export const Cards = ({flags}) => {
                     Languages: 
                     {flags.languages !== undefined &&
 
-                    Object.values(flags.languages).map((item)=>(
-                        <span> {item} </span>
+                    Object.values(flags.languages).map((item, index)=>(
+                        <span key={index}> {item} </span>
                     ))
                 
                     }
