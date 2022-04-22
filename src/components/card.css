@@ -12,9 +12,18 @@
 
 .card img{
     border: solid black 1px;
-    width: 200px;
+    max-height: 120px;
+    max-width: 190px;
 }
 
 .nameArea{
     text-align: center;
+}
+
+.flagArea{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
 }

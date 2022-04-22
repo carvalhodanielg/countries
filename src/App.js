@@ -3,6 +3,9 @@ import { Cards } from './components/Card';
 import { useEffect, useState } from 'react'
 import { API } from './components/API';
 import { Header } from './components/Header';
+import {Routes, Route}  from 'react-router-dom';
+import { Game } from './components/Game'
+// import { Home } from './components/Home'
 
 
 function App() {
@@ -54,6 +57,15 @@ function App() {
       
 
     <div className="App">
+
+
+    <Routes>
+
+        <Route path='/game' element={<Game />} ></Route>
+        {/* <Route path='/' element={<App/>} ></Route> */}
+
+    </Routes>
+
 
     <header>
 
