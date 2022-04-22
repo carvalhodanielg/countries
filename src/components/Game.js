@@ -27,11 +27,13 @@ const randCountrie = () => {
 
 const changeFlag = () => {
     randCountrie();
+    setStatus(false)
 }
 
 const changeStatus = () => {
 
     setStatus(!status);
+
 }
 
 
@@ -46,11 +48,14 @@ const changeStatus = () => {
                     <Cards flags={flags[Countrie]} status={status}/>
                     }
 
+                </div>
+                
+                <div className='buttonArea'>
+
                     <button onClick={changeFlag}>Change Countrie</button> 
                     <button onClick={changeStatus} >Reveal Countrie</button>
 
                 </div>
-                
   
 
                 
