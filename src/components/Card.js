@@ -44,6 +44,7 @@ export const Cards = ({flags, status}) => {
 
 
 
+
                     Currency:
             </div>
 
