@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react'
 import { API } from './API';
 import { Header } from './Header';
 
+
 export const Home = () => {
 
     const [flags, setFlags] = useState();
     const [loading, setLoading] = useState(true);
     const [textInput, setTextInput] = useState("");
+    const [status, setStatus] = useState(true);
   
   
     const loadCountries = async () => {
@@ -28,7 +30,7 @@ export const Home = () => {
     useEffect(()=>{
         setLoading(false);
         loadCountries();
-   
+        setStatus(true)
         setLoading(true);
     },[]);
   
@@ -56,7 +58,7 @@ export const Home = () => {
 
           flags.map((item, key)=>(
 
-          <Cards key={key} flags={item} />
+          <Cards key={key} flags={item} status={status} />
   
           ))
           }

@@ -2,28 +2,25 @@ import { Cards } from './Card';
 import {useState, useEffect} from 'react'
 import {Header} from './Header'
 import './game.css'
+import { API } from './API';
 
+export const Game = () =>{
 
-
-
-export const Game = ({flags}) =>{
-
-
-const [Countrie, setCountrie] = useState();
-const [status, setStatus] = useState(false);
-
-useEffect(()=>{
-    randCountrie();
-;},[])
-
+    const [flags, setFlags] = useState();
+    const [Countrie, setCountrie] = useState();
+    const [status, setStatus] = useState(false);
 
 const randCountrie = () => {
-
     let min = Math.ceil(1)
     let max = Math.floor(250)
     setCountrie(Math.floor(Math.random()*(max-min)) + min)
-
 }
+
+const loadCountries = async () => {
+    let json = await API.getAllFlags(); 
+    setFlags(json);
+}
+
 
 const changeFlag = () => {
     randCountrie();
@@ -31,11 +28,13 @@ const changeFlag = () => {
 }
 
 const changeStatus = () => {
-
     setStatus(!status);
-
 }
 
+useEffect(()=>{
+    randCountrie();
+    loadCountries();
+;},[])
 
     return(
 

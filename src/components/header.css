@@ -1,8 +1,21 @@
 .header h2{
     font-size: 3rem;
     margin: 0;
+    color: #0f4189;
 }
 
 .header p{
     font-size: 1.3rem;;
+}
+
+.menu{
+    margin: 0 20px;
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu span{
+    margin: 0 20px;
 }
