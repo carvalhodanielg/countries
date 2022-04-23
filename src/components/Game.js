@@ -3,12 +3,14 @@ import {useState, useEffect} from 'react'
 import {Header} from './Header'
 import './game.css'
 import { API } from './API';
+import { Loading } from './Loading';
 
 export const Game = () =>{
 
     const [flags, setFlags] = useState();
     const [Countrie, setCountrie] = useState();
     const [status, setStatus] = useState(false);
+    const [loading, setLoading] = useState(true);
 
 const randCountrie = () => {
     let min = Math.ceil(1)
@@ -17,8 +19,10 @@ const randCountrie = () => {
 }
 
 const loadCountries = async () => {
+    
     let json = await API.getAllFlags(); 
     setFlags(json);
+    setLoading(false);
 }
 
 
@@ -41,6 +45,10 @@ useEffect(()=>{
         <div className='game'> 
 
                 <Header/>
+
+                {loading==true &&
+                    <Loading/> 
+                }
 
                 <div className='content'>
                     {flags !== undefined &&

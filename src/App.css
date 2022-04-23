@@ -27,3 +27,9 @@ header{
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.loading{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}

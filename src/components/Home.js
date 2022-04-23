@@ -2,7 +2,8 @@ import { Cards } from './Card';
 import { useEffect, useState } from 'react'
 import { API } from './API';
 import { Header } from './Header';
-
+import  gifLoad  from '../images/loading-gif.gif'
+import { Loading } from './Loading';
 
 export const Home = () => {
 
@@ -13,11 +14,14 @@ export const Home = () => {
   
   
     const loadCountries = async () => {
+ 
         let json = await API.getAllFlags(); 
         setFlags(json);
+        setLoading(false);
     }
   
     const filteredCountries = async (busca) => {
+        setLoading(true);
       if(busca != ''){
         let json = await API.filteredFlags(busca);
         setFlags(json)
@@ -25,13 +29,14 @@ export const Home = () => {
       }else{
         loadCountries();
       }
+      setLoading(false);
     }
   
     useEffect(()=>{
-        setLoading(false);
+  
         loadCountries();
         setStatus(true)
-        setLoading(true);
+
     },[]);
   
     const handleChangeInput = (e) => {
@@ -49,9 +54,15 @@ export const Home = () => {
           <Header flags={flags}/>
       </header>
 
+
+
       <div className='searchArea'>
           <input type='text' value={textInput} onChange={handleChangeInput} placeholder='Search countries by name...'/>
       </div>
+
+      {loading==true &&
+        <Loading/> 
+      }
 
       <div className='mainContainer'>
           {flags !== undefined &&

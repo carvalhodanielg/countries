@@ -5,6 +5,7 @@ import { Home } from './components/Home'
 
 import { useEffect, useState } from 'react'
 import { API } from './components/API';
+import  gifLoad  from './images/loading-gif.gif'
 
 function App() {
 
