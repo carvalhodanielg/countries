@@ -2,6 +2,7 @@ import './App.css';
 import {Routes, Route}  from 'react-router-dom';
 import { Game } from './components/Game'
 import { Home } from './components/Home'
+import { Pages } from './components/Pages'
 
 import { useEffect, useState } from 'react'
 import { API } from './components/API';
@@ -27,6 +28,7 @@ useEffect(()=>{
       <Routes>
           <Route path='/game' element={<Game flags={flags}/>} ></Route>
           <Route path='/' element={<Home />} ></Route>
+          <Route path='/pages' element={<Pages />} ></Route>
       </Routes>
 
 
