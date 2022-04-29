@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+<!--
+Hey, thanks for using the awesome-readme-template template.  
+If you have any enhancements, then fork this project and create a pull request 
+or just open an issue with the label "enhancement".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Don't forget to give this project a star for additional support ;)
+Maybe you can mention me or this repo in the acknowledgements too
+-->
+<div align="center">
 
-## Available Scripts
+  <img src="public/red-flag.png" alt="logo" width="200" height="auto" />
+  <h1>World Countries Data</h1>
+  
+  <p>
+    Welcome to my project!! 
+  </p>
+  
+  
+<!-- Badges -->
+<p>
 
-In the project directory, you can run:
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+  </a>
+  
+</p>
+   
+<h4>
+    <a href="https://countries-taupe-zeta.vercel.app/">View Demo</a>
+</div>
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [About the Project](#about-the-project)
+  * [Screenshots](#screenshots)
+  * [Tech Stack](#tech-stack)
+  * [Features](#features)
+  * [Color Reference](#color-reference)
 
-### `npm test`
+- [Getting Started](#getting-started)
+  * [Run Locally](#run-locally)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+  
 
-### `npm run build`
+<!-- About the Project -->
+## :star2: About the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Screenshots -->
+### :camera: Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<div align="center"> 
+  <img src="https://user-images.githubusercontent.com/100332887/164894772-d6d9ae08-c6a2-4907-9919-5754fcb05a2d.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/164894792-44544595-c9e4-41fd-b6f7-59fe90e372cc.png" alt="screenshot" />
+  
+  <img src="https://user-images.githubusercontent.com/100332887/164894801-0f688efc-a8ee-4c40-9970-a1d6e51242b1.png" alt="screenshot" />
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- TechStack -->
+### :space_invader: Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  <ul>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- Features -->
+### :dart: Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- See countries
+- Search by name  
+- Guess a random countrie by their flag
+  
+  
+  
+<!-- API's used -->
+### :dart: API's
 
-### Analyzing the Bundle Size
+  <ul>
+    <li><a href="https://restcountries.com/">Rest Countrie API - V3.1 </a></li>
+  </ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- Color Reference -->
+### :art: Color Reference
 
-### Advanced Configuration
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Body Color | ![#FFF](https://via.placeholder.com/10/FFF?text=+) #FFF |
+| Card Color | ![#F2F8FF](https://via.placeholder.com/10/F2F8FF?text=+) #F2F8FF |
+| Text Color | ![#0F4189](https://via.placeholder.com/10/0F4189?text=+) #0F4189 |
+| Button Color | ![#FF793F](https://via.placeholder.com/10/FF793F?text=+) #FF793F |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- Getting Started -->
+## 	:toolbox: Getting Started
 
-### `npm run build` fails to minify
+<!-- Prerequisites -->
+### :bangbang: Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project uses npm as package manager
+
+  
+<!-- Run Locally -->
+### :running: Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/carvalhodanielg/countries.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+
+  
+  
+<!-- Contact -->
+## :handshake: Contact
+
+Daniel Carvalho - [Linkedin](https://www.linkedin.com/in/carvalhodanielg/) - carvalhodanielg@gmail.com
+
+Project Link: [GitHub](https://github.com/carvalhodanielg/countries)
+
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
